@@ -14,7 +14,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var txtFieldBottom: UITextField!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var cameraButton: UIToolbar!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     
     let memeTextAttributes = [
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewWillAppear(animated)
         
         // self.subscribeToKeyboardNotifications()
-        cameraButton.isHidden = UIImagePickerController.isSourceTypeAvailable(.camera)
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
     }
     
