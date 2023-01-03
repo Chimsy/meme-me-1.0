@@ -188,7 +188,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         txtFieldTop.text = "TOP"
         txtFieldBottom.text = "BOTTOM"
-        self.imageView.image = nil
+        imageView.image = nil
     }
     
 }
