@@ -21,8 +21,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpTextField(textField: txtFieldTop)
-        setUpTextField(textField: txtFieldBottom)
+        setUpTextField(textField: txtFieldTop, text: "TOP")
+        setUpTextField(textField: txtFieldBottom, text: "BOTTOM")
         shareButton.isEnabled = false
     }
     
@@ -70,23 +70,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     
     // MARK: TextFields
-    func setUpTextField(textField: UITextField) {
+    func setUpTextField(textField: UITextField, text: String) {
         let memeTextAttributes = [
             NSAttributedString.Key.strokeColor : UIColor.black,
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
             NSAttributedString.Key.strokeWidth : -4.0] as? [NSAttributedString.Key  : Any]
         
-        textField.defaultTextAttributes = memeTextAttributes!
-        
-        txtFieldTop.text = "TOP"
-        txtFieldBottom.text = "BOTTOM"
-        
-        textField.textAlignment = .center
         textField.delegate = self
+        textField.text = text
+        textField.defaultTextAttributes = memeTextAttributes!
+        textField.textAlignment = .center
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "TOP" || textField.text == "BOTTOM"{
             textField.text = ""
         }

@@ -39,7 +39,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2m-jw-JIm" userLabel="Top Text Field">
-                                <rect key="frame" x="10" y="151" width="408" height="18.666666666666657"/>
+                                <rect key="frame" x="10" y="121.00000000000001" width="408" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -83,7 +83,7 @@
                             <constraint firstItem="e2C-Ih-rRL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cXA-CP-3ze"/>
                             <constraint firstItem="i2m-jw-JIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hMh-bQ-pl2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GUm-nS-10f" secondAttribute="trailing" constant="10" id="lWa-FU-k7O"/>
-                            <constraint firstItem="i2m-jw-JIm" firstAttribute="top" secondItem="e2C-Ih-rRL" secondAttribute="bottom" constant="60" id="nAa-jd-xdZ"/>
+                            <constraint firstItem="i2m-jw-JIm" firstAttribute="top" secondItem="e2C-Ih-rRL" secondAttribute="bottom" constant="30" id="nAa-jd-xdZ"/>
                             <constraint firstItem="GUm-nS-10f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="oY5-8v-n0t"/>
                             <constraint firstItem="eeV-SJ-7Rj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p1b-9I-GEL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GUm-nS-10f" secondAttribute="trailing" constant="10" id="ut8-Ym-P9l"/>
