@@ -57,7 +57,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     @objc func keyboardWillShow(_ notification: Notification) {
         if txtFieldBottom.isEditing {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
