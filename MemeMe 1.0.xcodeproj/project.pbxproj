@@ -294,6 +294,7 @@
 				DEVELOPMENT_TEAM = 42D692SC4P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "MemeMe Would Like To Access Your Camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "MemeMe Would Like To Access Your Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -324,6 +325,7 @@
 				DEVELOPMENT_TEAM = 42D692SC4P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "MemeMe Would Like To Access Your Camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "MemeMe Would Like To Access Your Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
