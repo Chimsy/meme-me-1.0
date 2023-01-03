@@ -140,6 +140,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Create The Meme
         let memedImage = generateMemedImage()
         _ = Meme(top: txtFieldTop.text!, bottom: txtFieldBottom.text!, image: imageView.image, memedImage:memedImage)
+        
         //TODO: Add to memes array in AppDelegate
     }
     
