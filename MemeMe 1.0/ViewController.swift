@@ -75,7 +75,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             NSAttributedString.Key.strokeColor : UIColor.black,
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key.strokeWidth : -4.0] as? [NSAttributedString.Key  : Any]
+            NSAttributedString.Key.strokeWidth : -4.0] as? [NSAttributedString.Key  : Any
+            ]
         
         textField.delegate = self
         textField.text = text
@@ -152,8 +153,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func shareButtonAction(_ sender: Any) {
-        print("\nℹ️ MemeMe: Did Press Share Button  \n✅")
-        
         let memedImage = generateMemedImage()
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         activityController.completionWithItemsHandler = { activity, success, items, error in
@@ -165,7 +164,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
-        //        print("\nℹ️ MemeMe: Did Press Cancel Button \n✅")
+        shareButton.isEnabled = false
         
         txtFieldTop.text = "TOP"
         txtFieldBottom.text = "BOTTOM"
