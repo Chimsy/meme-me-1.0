@@ -162,8 +162,22 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let memedImage = generateMemedImage()
         let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         activityController.completionWithItemsHandler = { activity, success, items, error in
-            self.save()
+            
+            if success {
+                self.save()
+            } else{
+                DispatchQueue.main.async {
+                    let alertMsg = "Alert message when something goes wrong when saving the meme"
+                    let message = NSLocalizedString("Unable to save meme", comment: alertMsg)
+                    let alertController = UIAlertController(title: "MemeMe", message: message, preferredStyle: .alert)
+                    
+                    alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert OK button"), style: .cancel, handler: nil))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
             self.dismiss(animated: true, completion: nil)
+            
         }
         
         present(activityController, animated: true, completion: nil)
