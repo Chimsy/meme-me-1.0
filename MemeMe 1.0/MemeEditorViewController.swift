@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     // MARK: IBOutlets
     @IBOutlet weak var imageView: UIImageView!
@@ -30,7 +30,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewWillAppear(animated)
         
         subscribeToKeyboardNotifications()
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+#if targetEnvironment(simulator)
+        cameraButton.isEnabled = false;
+#else
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera);
+#endif
     }
     
     override func viewWillDisappear(_ animated: Bool) {
