@@ -33,9 +33,9 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         subscribeToKeyboardNotifications()
         
 #if targetEnvironment(simulator)
-        cameraButton.isEnabled = false;
+        cameraButton.isEnabled = false
 #else
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera);
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 #endif
     }
     
