@@ -44,34 +44,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         unsubscribeFromKeyboardNotifications()
     }
-    
-    // MARK: TextFields
-    func setUpTextField(textField: UITextField, text: String) {
-        let memeTextAttributes = [
-            NSAttributedString.Key.strokeColor : UIColor.black,
-            NSAttributedString.Key.foregroundColor : UIColor.white,
-            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key.strokeWidth : -4.0] as? [NSAttributedString.Key  : Any
-            ]
-        
-        textField.delegate = self
-        textField.text = text
-        textField.defaultTextAttributes = memeTextAttributes!
-        textField.textAlignment = .center
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text == "TOP" || textField.text == "BOTTOM"{
-            textField.text = ""
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    
+
     // MARK: Generate & Send Meme
     func pickAnImageFromSource(source: UIImagePickerController.SourceType) {
         let pickerController = UIImagePickerController()
@@ -115,9 +88,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     func save() {
         // Create The Meme
         let memedImage = generateMemedImage()
-        _ = Meme(topText: txtFieldTop.text!, bottomText: txtFieldBottom.text!, originalImage: imageView.image, memedImage:memedImage)
+        let meme = Meme(topText: txtFieldTop.text!, bottomText: txtFieldBottom.text!, originalImage: imageView.image, memedImage:memedImage)
         
-        //TODO: Add to memes array in AppDelegate
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     // MARK: IBActions
