@@ -188,7 +188,7 @@
                                                 <action selector="shareButtonAction:" destination="BYZ-38-t0r" id="7ON-XU-ABB"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="VYs-GP-dr9">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="VYs-GP-dr9">
                                             <connections>
                                                 <action selector="cancelButtonAction:" destination="BYZ-38-t0r" id="cJu-5r-luR"/>
                                             </connections>

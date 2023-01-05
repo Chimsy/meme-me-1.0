@@ -184,12 +184,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         present(activityController, animated: true, completion: nil)
     }
     
-    @IBAction func cancelButtonAction(_ sender: Any) {
+    @IBAction func cancelButtonAction(_ sender: UIBarButtonItem) {
         shareButton.isEnabled = false
         
         txtFieldTop.text = "TOP"
         txtFieldBottom.text = "BOTTOM"
         imageView.image = nil
+        
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
 }
