@@ -60,14 +60,38 @@
 			children = (
 				B59D839928AAA398000953B4 /* AppDelegate.swift */,
 				B59D839B28AAA398000953B4 /* SceneDelegate.swift */,
-				B59D839D28AAA398000953B4 /* MemeEditorViewController.swift */,
-				B5766B0228ABC146002A484A /* Meme.swift */,
-				B59D839F28AAA398000953B4 /* Main.storyboard */,
-				B59D83A228AAA39D000953B4 /* Assets.xcassets */,
-				B59D83A428AAA39D000953B4 /* LaunchScreen.storyboard */,
+				B5FECFED29671BC400B43530 /* Model */,
+				B5FECFEF29671BF600B43530 /* View */,
+				B5FECFEE29671BDF00B43530 /* Controller */,
 				B59D83A728AAA39D000953B4 /* Info.plist */,
 			);
 			path = "MemeMe 1.0";
+			sourceTree = "<group>";
+		};
+		B5FECFED29671BC400B43530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5766B0228ABC146002A484A /* Meme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5FECFEE29671BDF00B43530 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B59D839D28AAA398000953B4 /* MemeEditorViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5FECFEF29671BF600B43530 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B59D839F28AAA398000953B4 /* Main.storyboard */,
+				B59D83A228AAA39D000953B4 /* Assets.xcassets */,
+				B59D83A428AAA39D000953B4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
