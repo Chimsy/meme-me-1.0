@@ -69,7 +69,6 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="wft-nx-ijN"/>
                     <navigationItem key="navigationItem" title="Sent Memes List" id="Xl7-Wq-9P2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gZL-Pf-oNV" userLabel="Add"/>
                     </navigationItem>
