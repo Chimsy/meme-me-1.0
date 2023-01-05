@@ -73,7 +73,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sent Memes List" id="Xl7-Wq-9P2">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="Xl7-Wq-9P2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gZL-Pf-oNV" userLabel="Add">
                             <connections>
                                 <action selector="createMeme:" destination="kBL-ja-4Ff" id="HaI-dZ-WG3"/>
@@ -151,7 +151,7 @@
                             <outlet property="delegate" destination="WnD-a4-6Q3" id="jL6-3m-hUs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Sent Memes Grid" id="xgh-k6-U2T">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="xgh-k6-U2T">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Ix-jr-TmM" userLabel="Add">
                             <connections>
                                 <action selector="createMeme:" destination="WnD-a4-6Q3" id="deC-W8-3p3"/>
@@ -314,7 +314,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e7l-Z4-NEL"/>
+        <segue reference="Co6-Y8-5ai"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
