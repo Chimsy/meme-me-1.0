@@ -107,11 +107,15 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     @IBAction func shareButtonAction(_ sender: Any) {
         let memedImage = generateMemedImage()
-        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        activityController.completionWithItemsHandler = { activity, success, items, error in
-            
+        let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        
+        activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, success: Bool, returnedItems: [Any]?, error: Error?) in
+    
             if success {
                 self.save()
+                // Close the Editor after sharing
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
             } else{
                 DispatchQueue.main.async {
                     let alertMsg = "Alert message when something goes wrong when saving the meme"
@@ -123,11 +127,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
+            
             self.dismiss(animated: true, completion: nil)
             
         }
         
-        present(activityController, animated: true, completion: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonAction(_ sender: UIBarButtonItem) {
