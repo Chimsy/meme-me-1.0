@@ -11,7 +11,6 @@ import UIKit
 class MemeCollectionViewController: UICollectionViewController {
     
     // MARK: Properties and Outlets
-
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var memes: [Meme]! {

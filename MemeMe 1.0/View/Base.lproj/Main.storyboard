@@ -30,13 +30,13 @@
         <!--Meme Table View Controller-->
         <scene sceneID="laX-ap-kGM">
             <objects>
-                <viewController id="kBL-ja-4Ff" userLabel="Meme Table View Controller" sceneMemberID="viewController">
+                <viewController id="kBL-ja-4Ff" userLabel="Meme Table View Controller" customClass="MemeTableViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CoP-yX-F6h" userLabel="Meme Table View">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="MemeTableViewCell" focusStyle="custom" rowHeight="100" id="xOY-dC-yMo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="MemeTableViewCell" focusStyle="custom" rowHeight="100" id="xOY-dC-yMo" customClass="MemeTableViewCell" customModule="MemeMe_1_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xOY-dC-yMo" id="lvd-eU-sKn">
@@ -66,15 +66,24 @@
                                         <constraint firstItem="Yzg-i5-ELg" firstAttribute="top" secondItem="lvd-eU-sKn" secondAttribute="topMargin" constant="28" id="n4a-FZ-r2q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="memeLabel" destination="Yzg-i5-ELg" id="WOd-ms-cqU"/>
+                                    <outlet property="tableImageView" destination="ZiH-z7-tZh" id="Aih-6a-s8F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sent Memes List" id="Xl7-Wq-9P2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gZL-Pf-oNV" userLabel="Add"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gZL-Pf-oNV" userLabel="Add">
+                            <connections>
+                                <action selector="createMeme:" destination="kBL-ja-4Ff" id="HaI-dZ-WG3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="Co6-Y8-5ai"/>
+                        <outlet property="memeTableView" destination="CoP-yX-F6h" id="Ucf-6U-Waf"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="createFromTable" id="Co6-Y8-5ai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIh-Nh-9rd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,17 +159,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="e7l-Z4-NEL"/>
+                        <outlet property="flowLayout" destination="I5x-C2-mJu" id="3vH-Cg-dQG"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="createFromCollection" id="e7l-Z4-NEL"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Erk-Nb-O2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2702" y="301"/>
         </scene>
-        <!--Meme Table View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemeTableViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,7 +314,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Co6-Y8-5ai"/>
+        <segue reference="e7l-Z4-NEL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
