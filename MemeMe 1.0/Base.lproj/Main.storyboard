@@ -41,12 +41,11 @@
             </objects>
             <point key="canvasLocation" x="2702" y="-809"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="ws7-qX-T9K">
             <objects>
-                <navigationController id="J7y-dq-mFK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1jc-mI-S2V"/>
-                    <navigationItem key="navigationItem" id="wBE-YK-bhk"/>
+                <navigationController id="J7y-dq-mFK" userLabel="Table" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="table" id="1jc-mI-S2V" userLabel="Table"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r60-re-FSK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -63,7 +62,7 @@
         <scene sceneID="82d-8U-Kcv">
             <objects>
                 <navigationController id="w9k-dq-RQS" userLabel="Collection" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jXL-jf-QR4"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection" id="jXL-jf-QR4"/>
                     <navigationItem key="navigationItem" id="JhY-0V-ZmC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FcA-vD-pxq">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -244,6 +243,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="collection" width="29.666666030883789" height="30"/>
+        <image name="table" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
