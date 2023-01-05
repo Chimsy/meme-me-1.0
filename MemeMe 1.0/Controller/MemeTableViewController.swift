@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class MemeTableViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     // MARK: IBOutlets
     @IBOutlet weak var imageView: UIImageView!
@@ -18,6 +18,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
