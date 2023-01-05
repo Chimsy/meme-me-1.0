@@ -9,38 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meme Table View Controller-->
-        <scene sceneID="Rpe-tb-C4Z">
-            <objects>
-                <tableViewController id="2ZF-mj-pMc" userLabel="Meme Table View Controller" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="U3S-w9-mpy" userLabel="Meme Table View">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jiC-DG-g85">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jiC-DG-g85" id="Es9-lV-C4F">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="2ZF-mj-pMc" id="seC-Yw-bW5"/>
-                            <outlet property="delegate" destination="2ZF-mj-pMc" id="hlr-TV-uZ8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dDg-z2-iZE"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="dPY-dK-UES"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ac-Yy-MUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2702" y="-809"/>
-        </scene>
         <!--Table-->
         <scene sceneID="ws7-qX-T9K">
             <objects>
@@ -50,13 +18,57 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="2ZF-mj-pMc" kind="relationship" relationship="rootViewController" id="w5k-if-gam"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlO-vX-OUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1589" y="-809"/>
+        </scene>
+        <!--Meme Table View Controller-->
+        <scene sceneID="laX-ap-kGM">
+            <objects>
+                <viewController id="kBL-ja-4Ff" userLabel="Meme Table View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CoP-yX-F6h" userLabel="Meme Table View">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="MemeTableViewCell" focusStyle="custom" rowHeight="100" id="xOY-dC-yMo">
+                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xOY-dC-yMo" id="lvd-eU-sKn">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-z7-tZh" userLabel="Table Image View">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="EmE-A6-Rxe"/>
+                                                <constraint firstAttribute="height" constant="100" id="MaA-xB-RiF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-i5-ELg" userLabel="Meme Label">
+                                            <rect key="frame" x="120" y="39" width="233" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Yzg-i5-ELg" secondAttribute="trailing" constant="20" id="CPL-aK-Huo"/>
+                                        <constraint firstItem="ZiH-z7-tZh" firstAttribute="leading" secondItem="lvd-eU-sKn" secondAttribute="leading" id="E3I-8e-zPb"/>
+                                        <constraint firstItem="ZiH-z7-tZh" firstAttribute="top" secondItem="lvd-eU-sKn" secondAttribute="top" id="PKy-6n-P9X"/>
+                                        <constraint firstItem="Yzg-i5-ELg" firstAttribute="leading" secondItem="ZiH-z7-tZh" secondAttribute="trailing" constant="20" id="g4Z-Io-seO"/>
+                                        <constraint firstItem="Yzg-i5-ELg" firstAttribute="centerY" secondItem="ZiH-z7-tZh" secondAttribute="centerY" id="gwc-od-YOR"/>
+                                        <constraint firstItem="Yzg-i5-ELg" firstAttribute="top" secondItem="lvd-eU-sKn" secondAttribute="topMargin" constant="28" id="n4a-FZ-r2q"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIh-Nh-9rd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2702" y="-809"/>
         </scene>
         <!--Collection-->
         <scene sceneID="82d-8U-Kcv">
@@ -238,10 +250,8 @@
             <point key="canvasLocation" x="396" y="-249"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dPY-dK-UES"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="LaunchImage" width="1536" height="2048"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="collection" width="29.666666030883789" height="30"/>
         <image name="table" width="30" height="30"/>
